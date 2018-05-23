@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Monster Add</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/add_monster.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <main id="monserAddTool">
+            <div id="" class="container">
+                <h1>Add Monsters Here</h1>
+                <div id="actionsBar" class="row">
+                    <div class="col-sm-4">
+                        <button type="button" id="addRow" class="btn btn-block btn-primary">Add Row</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <button type="button" id="submitRows" class="btn btn-block btn-success">Submit Rows</button>
+                    </div>
+                </div>
+            </div>
+            <div id="addMonsterHolder" class="container">
+                
+            </div>
+        </main>
+        
+        <div id="addMonsterRowTemplate" class="hidden">
+            <form class="row margin-top-50 monster-stats noGrab">
+                <div class="col-sm-6 col-md-2">
+                    <label for="chapter">Chapter</label>
+                    <select id="chapter" name="chapter" class="form-control">
+                        <option value="BASE">BASE</option>
+						<option value="BASE">BASE</option>
+						<option value="DEN">DEN</option>
+						<option value="SFO">SFO</option>
+						<option value="SEA">SEA</option>
+						<option value="ORE">ORE</option>
+                    </select>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" name="name" class="form-control">
+                </div>
+                <div class="col-sm-6 col-md-1">
+                    <label for="ace">ACE</label>
+                    <input id="ace" type="number" name="ace" class="form-control">
+                </div>
+                <div class="col-sm-6 col-md-2">
+                    <label for="points_total">Points Total</label>
+                    <input id="points_total" type="number" name="points_total" class="form-control">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <label for="what_see">What Do I See</label>
+                    <textarea id="what_see" class="form-control" name="what_see"></textarea>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <label for="appearance">Appearance</label>
+                    <input id="appearance" type="text" name="appearance" class="form-control">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <label for="armor">Armor</label>
+                    <input id="armor" type="text" name="armor" class="form-control">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <label for="threshold">Threshold</label>
+                    <input id="threshold" type="number" name="threshold" class="form-control">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <label for="intelligence">Intelligence</label>
+                    <select id="intelligence" name="intelligence" class="form-control">
+						<option value=""></option>
+						<option value="Animal">Animal</option>
+                        <option value="Low">Low</option>
+                        <option value="Normal">Normal</option>
+                        <option value="High">High</option>
+                        <option value="Genius">Genius</option>
+                    </select>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <label for="spell_pyramid">Spell Pyramid</label>
+                    <input id="spell_pyramid" type="text" name="spell_pyramid" class="form-control">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <label for="strength">Strength Bonus</label>
+                    <input id="strength" type="number" name="strength" class="form-control">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <label for="rips">Rips From</label>
+                    <input id="rips" type="text" name="rips" class="form-control">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <label for="rips_weak">Rips From When Weaknessed</label>
+                    <input id="rips_weak" type="text" name="rips_weak" class="form-control">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <label for="weapons">Weapons and Claws</label>
+                    <input id="weapons" type="text" name="weapons" class="form-control">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <label for="dmg_oneh">Damage 1 Handed</label>
+                    <input id="dmg_oneh" type="number" name="dmg_oneh" class="form-control">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <label for="dmg_twoh">Damage 2 Handed</label>
+                    <input id="dmg_twoh" type="number" name="dmg_twoh" class="form-control">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <label for="carrier">Carrier</label>
+                    <input id="carrier" type="text" name="carrier" class="form-control">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <label for="offensive">Offensive</label>
+                    <textarea id="offensive" class="form-control" name="offensive"></textarea>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <label for="defensive">Defensive</label>
+                    <textarea id="defensive" class="form-control" name="defensive"></textarea>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <label for="vulnerabilities">Vulnerabilities</label>
+                    <textarea id="vulnerabilities" class="form-control" name="vulnerabilities"></textarea>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <label for="skills">Skills</label>
+                    <textarea id="skills" class="form-control" name="skills"></textarea>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <label for="rank">Rank</label>
+                    <input id="rank" type="text" name="rank" class="form-control">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <label for="creature_type">Creature Type</label>
+                    <input id="creature_type" type="text" name="creature_type" class="form-control">
+                </div>
+            </form>
+        </div>
+        
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/add_monster.js"></script>
+    </body>
+</html>

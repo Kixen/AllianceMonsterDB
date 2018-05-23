@@ -1,0 +1,16 @@
+.box-val{
+    border: 1px solid black;
+    padding: 0px 0px 0px 5px;
+}
+
+.lg-height{
+    height: 150px;
+}
+.halfzies{
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+.margin-top-20{
+	margin-top: 20px;
+}
